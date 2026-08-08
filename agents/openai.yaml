@@ -1,0 +1,4 @@
+interface:
+  display_name: "Athena"
+  short_description: "选择固定画风，只需描述内容，即可生成风格统一的系列图片"
+  default_prompt: "使用 $athena。请先用简短菜单列出当前可用风格，让我选择后再生成图片。"
