@@ -10,7 +10,7 @@
 - **默认质量：** `high`
 - **文件名前缀：** `knit-doll-`
 
-把用户描述塑造成一件真实可触摸的混合材质手工玩偶作品。将平滑简化的玩偶脸、羊毛毡头发、带刷毛光晕的毛毡化针织上装、较紧密的梭织或低绒下装、非针织微缩鞋、略带笨拙的夸张比例，以及高饱和暖色棚拍或有前中后景的柔焦童话布景组合在一起。画面应像精心搭建的定格动画剧照：主体细节锐利，背景色彩丰富、环境可读但柔化。不要让全身所有部位都使用同一种毛线材质，也不要把背景简化为孤立角色后面的一块渐变色。
+把用户描述塑造成一件真实可触摸的混合材质手工玩偶作品。将平滑简化的玩偶脸、羊毛毡头发、带刷毛光晕的毛毡化针织上装、较紧密的梭织或低绒下装、非针织微缩鞋和略带笨拙的夸张比例，放入正常的 Blender / Cinema 4D / Octane 童话三维环境中。材质边界必须明确：角色、服装和角色侧配饰可见针织、毛毡与飞毛；天空、地面、建筑、花草、树木、水面和环境陈设使用干净、圆润、无纤维的风格化 PBR 3D 材质。画面应像高品质角色广告或定格动画剧照：主体细节锐利，背景色彩丰富、有体积光与真实景深，但清晰度显著低于角色。
 
 ## 定义性视觉信号
 
@@ -20,7 +20,7 @@
 2. 角色具有手工玩偶比例：大头、细颈、简化躯干和夸张服装轮廓，带轻微不对称感。
 3. 上装同时具有可辨针脚和柔软刷毛光晕，下装与鞋子使用不同材质，形成清楚的软硬与粗细对比。
 4. 五官简化为黑色珠眼、短线眉、小鼻和克制嘴形，搭配柔和圆形腮红。
-5. 用户未指定背景时，从六套明亮轻快的三层童话纤维世界中随机选择一套；不得默认落在空白渐变或单一自然背景中。
+5. 用户未指定背景时，从六套明亮轻快的 Blender / C4D / Octane 童话三维环境中随机选择一套；背景不得出现针织、毛毡、布料、缝线或纸艺材质。
 6. 服装至少有一个主轮廓层、一个辅助层和 3–6 个可辨手工细节，如罗纹、纽扣、贴袋、明线、流苏、毛球或贴布。
 
 ## 1. 混合媒介材质
@@ -36,6 +36,7 @@
 - 动物身体使用短密绒毛、羊毛毡或针织结构；绒毛应柔软、均匀、略有方向，不得像真实皮毛摄影。
 - 帆布、丹宁、灯芯绒、橡胶和哑光皮革不是例外装饰，而是用来打破“全身一块毛线”的必要硬质与细密材质层。
 - 五金、眼镜和手机等硬物必须简化成圆角微缩道具，避免写实金属、玻璃反射和品牌细节。
+- 纤维材质的使用范围以角色为界：不得把角色的毛线、羊毛毡、针织和飞毛复制到背景地面、建筑、植物、云、水面或环境道具上。
 
 ## 2. 角色比例与造型
 
@@ -83,7 +84,7 @@
 - 肤色与浅色绒毛保持温暖奶油调，腮红使用小面积珊瑚粉；白云和高光保持暖白，不能发灰或过曝。
 - 禁止暗沉脏灰、复古棕褐滤镜、米棕同色、近黑背景、霓虹色、金属色和无主次彩虹渐变。
 
-## 6. 默认童话背景库
+## 6. 默认 3D 童话背景库
 
 ### 选择规则
 
@@ -95,76 +96,77 @@
 
 ### 所有预设的共同构图
 
-- 所有景物都使用针刺羊毛毡、短绒、针织、软布、磨砂纸艺或圆润微缩模型制作，必须与主体处于同一个手工纤维世界；不得出现写实天空、真实树叶、摄影花朵或塑料景观。
-- 使用清楚的三层深度：下方 18–28% 为有细节的前景地面，中层放置完整锐利主体，远层安排可辨但柔化的标志结构与天空或室内顶部。
-- 每套背景至少包含 5 种不同的景物类型，并必须同时拥有：一个标志性结构、一条弯曲或斜向引导线、左右不对称的两个景物簇群、3–7 个前景小细节和远景层次。
-- 背景应丰富、明亮、轻快、童话、梦幻，但背景对比度与清晰度低于主体约一档；不得让树枝、建筑尖顶、灯串或云朵穿过角色脸部。
-- 使用中等浅景深：主体脸、双手、服装、鞋子和道具锐利；前景最近的小物略柔，远景自然柔焦但仍能辨认题材。禁止把整个背景糊成无内容色块。
+- 环境统一使用 Blender / Cinema 4D 场景建模与 Octane 风格化渲染：圆润简化的几何、高品质 PBR 材质、干净的漆面、灰泥、玻璃、陶瓷、石材、橡胶、水面与自然植物表面。环境必须是无毛线、无针织、无毛毡、无飞毛的正常三维世界。
+- 使用清楚的三层深度：下方 18–28% 为正常 3D 材质的前景地面，中层放置完整锐利的针织玩偶主体，远层安排柔化的环境锚点与天空或室内顶部。
+- 每套背景使用 4–6 种环境元素，并同时包含：一个可读的环境锚点、一条弯曲或斜向引导线、左右不对称的两个色彩或景物簇群以及 2–5 个前景点缀。丰富度来自层次、色彩和光影，不是把所有景物都渲染得同样清楚。
+- 背景应明亮、轻快、童话、梦幻，对比度低于主体约一档，细节清晰度低于主体约两档；不得让树枝、建筑尖顶、灯串或云朵穿过角色脸部。
+- 使用 70–100mm 人像镜头感和中等浅景深：主体脸、双手、服装、鞋子和道具锐利；近景略柔，中远景逐层虚化为奶油般的圆润散景，但题材和主色仍然可读。
+- 用同一组环境光、接触阴影和颜色反射将纤维角色与无纤维 3D 环境融合；不得看起来像把玩偶贴在另一张背景图上。
 - 不得自动增加新人物、动物伙伴、可读招牌、品牌、文字或主叙事道具。
 
 ### F1 云桥花谷
 
-- 晴空蓝羊毛毡天空与 4–7 朵大小不同的奶油白软云。
-- 起伏的嫩绿毛毡山丘、花朵灌木、远处锥形树群和蜿蜒浅色小路。
-- 一条水蓝色小溪与圆润拱桥作为标志结构，小路或溪流形成 S 形引导线。
-- 前景加入不同高度的小花、苔藓石和短草簇；不得只出现天空、白云、花朵与树木四种元素。
+- 晴空蓝的体积天空、奶油白云和微弱大气透视；云朵是洁净的体积云，不是羊毛、棉花或毛毡。
+- 起伏的嫩绿 3D 山丘、风格化树冠、花朵灌木和蜿蜒浅色小路，植物使用正常叶片与花瓣表面。
+- 一条带柔和反射的水蓝色小溪与圆润漆面拱桥作为环境锚点，小路或溪流形成 S 形引导线。
+- 前景使用少量正常 3D 小花、苔藓石和短草簇，通过景深而非纤维纹理柔化。
 
 ### F2 糖果小镇集市
 
-- 薄荷绿、桃粉、奶油黄和水蓝色的圆角小屋，带遮棚、花箱和无文字橱窗。
+- 薄荷绿、桃粉、奶油黄和水蓝色的圆角灰泥或漆面小屋，带布质遮棚、陶瓷花箱和无文字玻璃橱窗。
 - 柔和石板街道或弯曲小巷作为引导线，一座拱门、钟楼轮廓或街角喷泉作为标志结构。
-- 上方使用彩旗或暖金灯串，街边加入圆润路灯、盆栽和布艺摊棚。
+- 上方使用纤细彩旗或暖金灯串，街边加入圆润金属路灯、陶盆植物和正常布料摊棚。
 - 建筑保持微缩、柔焦和低对比，不出现可读店名、车辆或人群。
 
 ### F3 蘑菇森林灯会
 
-- 薄荷与鼠尾草色的高低毛毡树群、柔软蕨叶、苔藓丘和圆润石径。
+- 薄荷与鼠尾草色的风格化 3D 树群、自然叶片蕨类、苔藓丘和圆润石径，使用正常树皮、植物与石材材质。
 - 一棵带拱形树洞门的老树或一簇大型蘑菇屋作为标志结构。
 - 蜿蜒石径或跨越画面的灯串形成引导线，背景悬挂 7–15 个暖金色柔焦灯点。
-- 前景加入小蘑菇、落叶、苔藓石和发光花苞；整体明亮梦幻，不做黑暗森林。
+- 前景加入小蘑菇、落叶、苔藓石和微发光花苞；所有环境元素为无纤维 3D 表面，整体明亮梦幻，不做黑暗森林。
 
 ### F4 湖畔风车花田
 
-- 水蓝到青绿色的柔软湖面、远处圆丘、晴空与奶油白云。
+- 水蓝到青绿色的 Octane 水面，带柔和倒影和高光；远处为圆丘、体积晴空与奶油白云。
 - 一座粉彩小风车作为标志结构，木质小桥、短码头或沿湖小路形成斜向引导线。
 - 湖边安排芦苇、成片花田、圆润灌木和少量反光亮点。
-- 前景使用花簇、软石和短草，远景使用柔焦丘陵与云层，禁止空旷单调的大面积湖面。
+- 前景使用花簇、圆润石头和短草，远景使用柔焦丘陵与云层，禁止空旷单调的大面积湖面。
 
 ### F5 玻璃花房茶园
 
-- 薄荷绿与奶油白的圆拱玻璃花房、桃粉框架和透亮水蓝玻璃作为标志结构。
-- 弯曲砖径或棋盘格软布地面形成引导线，周围布置花盆、悬垂藤蔓、圆叶植物与花架。
+- 薄荷绿与奶油白的圆拱玻璃花房、桃粉金属框架和透亮水蓝玻璃作为环境锚点，玻璃保留柔和透射、反射与粗糙度。
+- 弯曲砖径或哑光棋盘格瓷砖地面形成引导线，周围布置陶制花盆、悬垂藤蔓、圆叶植物与漆面花架。
 - 背景加入暖色壁灯或灯串、圆角长椅和模糊置物台，但不放可读文字与品牌器具。
-- 前景使用散落花瓣、小盆栽和柔软园艺石，整体像明亮春日花房而不是室内商店。
+- 前景使用散落花瓣、小盆栽和圆润园艺石，整体像明亮春日花房而不是室内商店。
 
 ### F6 梦幻游园会
 
-- 桃粉、奶油黄、薄荷绿和水蓝色的圆顶帐篷、旋转木马剪影或小摩天轮作为标志结构。
+- 桃粉、奶油黄、薄荷绿和水蓝色的圆顶帐篷、漆面旋转木马剪影或小摩天轮作为环境锚点。
 - 糖果色弯曲步道引导到远景，上方使用彩旗、气球簇和暖金灯串形成弧线。
-- 两侧安排软布摊棚、花箱、圆润灯柱和小旗，不出现文字招牌、品牌或人群。
-- 前景加入彩色软石、花朵和纸屑状毛毡点缀；画面欢乐但有秩序，不做拥挤杂乱的真实乐园。
+- 两侧安排正常布料摊棚、陶制花箱、圆润漆面灯柱和小旗，不出现文字招牌、品牌或人群。
+- 前景加入彩色卵石、花朵和少量彩纸点缀；所有环境物件使用无纤维 3D 材质，画面欢乐但有秩序。
 
 ### 用户明确要求简单背景时
 
 - 只在用户主动要求纯色、极简或摄影棚背景时使用明亮琥珀橙、桃粉、水蓝或薄荷色棚拍。
-- 即使简单，也保留中心光晕、轻微同色变化、细纤维底纹和地面接触层；不得使用平坦数字渐变。
+- 即使简单，也保留中心光晕、轻微同色变化、无纹理的哑光 C4D 无缝地台和地面接触阴影；不得使用细纤维底纹或平坦数字渐变。
 
 ## 6.1 构图与完整性
 
 - 完整角色占画面高度的 58–75%，为童话背景保留足够可见面积；头像或半身按用户要求裁切，但四周仍需看到至少 3 类预设景物线索。
 - 默认完整展示头顶、帽子、手、脚、尾巴与用户要求的道具，四边保留 8–12% 安全边距。
-- 使用眼平或轻微低机位的 50–85mm 肖像镜头感；避免广角、鱼眼和戏剧化透视。
+- 使用眼平或轻微低机位的 70–100mm 肖像镜头感；避免广角、鱼眼和戏剧化透视。
 - 让姿态保持编辑感和不对称节奏：头部轻倾、肩线错落、道具高低错开，不做僵直正面对称站姿。
 
 ## 7. 光线、镜头与完成度
 
 - 使用大型中性偏暖主光从左前上方照射，配合轻微偏冷的柔和填充和很弱的暖色轮廓光；不得用统一黄色灯光把所有颜色染成棕褐色。
-- 在主体头肩后方增加一块宽而柔的背景亮区，并在背景边缘保留较深同色层次；背景本身必须具有可见的色彩空气感，不能只靠主体轮廓光制造分离。
+- 使用 Octane 式全局照明、柔和体积光、高品质环境遮蔽与物理正确的色彩反射。在主体头肩后方保留宽而柔的亮区，背景边缘保留较深同色层次。
 - 轮廓光只用于照亮细小飞毛和针织边缘；不得形成强烈霓虹描边或舞台灯光。
 - 保留短而柔的地面接触阴影、轻微环境遮蔽和温暖肤色反射。
-- 默认童话场景使用中等浅景深，焦平面覆盖主体整张脸、双手、服装前片、鞋子和必要道具；前景最近小物略柔，远景形成奶油般柔焦但仍能辨认预设主题。用户明确要求棚拍时使用中等景深并保持整个角色清楚。
+- 默认童话场景使用中等浅景深和圆润光学散景，焦平面覆盖主体整张脸、双手、服装前片、鞋子和必要道具；近景轻柔，中远景呈奶油般柔焦，明亮灯点形成柔和散景圆。用户明确要求棚拍时使用中等景深并保持整个角色清楚。
 - 纱线、针脚、绒毛和缝线必须可辨，但不要锐化到刺眼、脏乱或像宏观纤维显微照片。
-- 成图应像高品质手工玩偶广告或定格动画角色摄影，而不是现实服装模特或普通 3D 卡通。
+- 成图应像用 Blender / C4D 搭景并由 Octane 渲染的高品质手工玩偶广告或定格动画角色摄影，而不是现实服装模特或全画面毛毡微缩模型。
 
 ## 8. 主体与道具适配
 
@@ -184,23 +186,23 @@
 
 ```text
 Use case: stylized-concept
-Asset type: reusable knit-doll character illustration, handcrafted textile puppet photography, <aspect ratio>
+Asset type: reusable knit-doll character illustration, handcrafted textile puppet staged inside a premium Blender / Cinema 4D / Octane environment, <aspect ratio>
 Primary request: <the user's subject, action, relationship, and explicitly requested objects>
 Required objects: <only explicitly requested semantic objects>
 Background preset: <selected F1, F2, F3, F4, F5 or F6; omit when the user specified a background>
-Scene/backdrop: <fully expanded description of only the selected preset, including its signature structure, leading path or curve, asymmetrical scenery clusters, 3–7 foreground details, middle-ground subject plane and softened far depth; if the user specified a background, use the user's background instead>
-Style/medium: handcrafted mixed-media textile doll, visible chunky knit loops, ribbed yarn, needle-felted wool, brushed short fibers, tactile stop-motion puppet aesthetic, deliberately handmade but polished
+Scene/backdrop: <fully expand only the selected preset as a normal non-textile Blender / Cinema 4D environment with stylized PBR surfaces, one environmental anchor, a leading path or curve, asymmetrical scenery clusters, 2–5 foreground details, a middle-ground subject plane and softened far depth; if the user specified a background, use the user's background instead>
+Style/medium: a handcrafted mixed-media textile doll with visible chunky knit loops, ribbed yarn, needle-felted wool and brushed short fibers, staged inside a polished non-textile Blender / Cinema 4D world with Octane-style rendering; tactile character, smooth 3D environment, deliberately handmade subject but professionally rendered scene
 Subject design: exaggerated handmade doll proportions, large simplified head, slender neck, simplified limbs, slightly oversized clothing and shoes, gentle three-quarter torso turn, 5–12 degree head tilt, uneven shoulder and elbow heights, subtle handmade asymmetry, immediately readable silhouette
 Wardrobe: use one hero brushed felted-knit garment plus 1–2 supporting clothing layers; when clothing is unspecified, design an inner layer, a fuzzy outer knit or scarf/hat layer, structured bottoms and non-knit shoes; include 3–6 coherent craft details such as ribbed collar, large buttons, patch pocket, drawstrings, visible topstitching, pompom, fringe or fabric applique; use only one pattern language; use finer woven felt, corduroy, denim or low-nap fabric for bottoms and non-knit miniature canvas, suede, matte leather or rubber footwear with a distinct sole; no invented brands
 Face design: simple black bead or short-oval eyes, tiny sculpted nose, short curved mouth, soft round blush, optional sparse freckles, warm sincere expression matched to the requested action; for laughter use closed crescent eyes or strong squint, a slight backward head tilt and one graphic open mouth; no realistic facial anatomy
 Composition/framing: default full complete character, occupying 58–75% of frame height so the selected fairytale world remains visible, centered or slightly off-axis, 8–12% safety margin, asymmetric editorial gesture, stagger multiple hand-held props at different heights and depths, all hands feet hats tails and requested props visible, no crop unless requested
-Lighting/mood: bright high-key warm daylight, gentle cool ambient fill, faint warm fiber rim light, luminous sky or ceiling light, warm practical bokeh where the selected preset includes lights, soft contact shadow, lighthearted dreamy storybook mood, preserve clean pastel hues without sepia or gray cast
+Lighting/mood: bright high-key warm daylight, Octane-style global illumination, soft volumetric light, gentle cool ambient fill, faint warm fiber rim light on the character only, luminous sky or ceiling light, warm circular optical bokeh where the selected preset includes lights, physically coherent contact shadow and color bounce, lighthearted dreamy storybook mood, preserve clean pastel hues without sepia or gray cast
 Color palette: bright cheerful dreamlike palette of 5–7 coordinated colors selected from sky blue, aqua, mint, fresh grass green, warm cream, lemon yellow, mustard, peach pink, coral, apricot orange and caramel; use 3–4 environment colors and 2–3 subject colors with clear separation, no muddy beige or dark background
-Materials/textures: strict mixed-material hierarchy; human face ears neck and hands are smooth matte low-fuzz doll material; hair is organized needle-felted wool or yarn clusters; upper garments combine readable knit structure with a dense brushed fuzzy felt halo; bottoms use finer woven felt, corduroy, denim or low-nap tight knit; shoes use non-knit canvas, suede, matte leather and molded rubber soles; animal bodies may use short plush fibers; hard props are simplified and rounded
-Focus/rendering: sharp face, hands, clothing front, shoes and required props; medium-shallow depth of field in the selected fairytale world, slightly soft nearest foreground details and softened but recognizable far scenery, never erase the background into generic blur; detailed fibers without harsh oversharpening
+Materials/textures: strict material zoning; human face ears neck and hands are smooth matte low-fuzz doll material; hair is organized needle-felted wool or yarn clusters; upper garments combine readable knit structure with a dense brushed fuzzy felt halo; bottoms use finer woven felt, corduroy, denim or low-nap tight knit; shoes use non-knit canvas, suede, matte leather and molded rubber soles; animal bodies may use short plush fibers; character-side hard props are simplified and rounded; the environment uses fiber-free stylized PBR materials such as smooth painted plaster, ceramic, stone, glass, metal, water, soil and natural leaf or petal surfaces
+Focus/rendering: sharp face, hands, clothing front, shoes and required props; 70–100mm portrait-lens look, medium-shallow depth of field, softly blurred near foreground, creamy circular bokeh and progressively softened mid-to-far 3D scenery; preserve readable subject fibers without harsh oversharpening; premium Blender / Cinema 4D scene with Octane-style global illumination, volumetric light, ambient occlusion and physically coherent contact shadows
 Text (verbatim): <exact text or no text>
-Constraints: consistent handcrafted textile language across the subject and selected background world, exactly one fully expanded background preset when the user did not specify a background, complete readable silhouettes, clothing present on human characters, tactile fiber detail, 3–6 coherent craft details, no extra people, new main characters, text or brands
-Avoid: combining multiple background presets, listing background options inside the image, plain sky-cloud-flower-tree background with no signature structure or path, fewer than five scenery types, photoreal sky or plants, plastic scenery, empty background, flat studio gradient when no background was specified, generic random blur with no set structure, uniform bokeh dots, bokeh covering the face, background so blurred that its theme is unreadable, cluttered sharp background, near-black backdrop, missing foreground-middle-background separation, muddy or dark palette, beige-on-beige palette, all-brown or all-orange color cast, sepia filter, kraft-paper background, tan mottled backdrop, low subject-background contrast, one identical yarn material covering the entire outfit, featureless one-piece sweater outfit, missing buttons seams pockets cuffs or accessory layers, too many unrelated patterns, crisp dry knit with no fuzzy felt halo, chunky-knit trousers matching the sweater, knitted shoes, crochet shoes, yarn soles, furry sock-like footwear, rough fuzzy human skin, knitted face, visible fibers on human hands, smooth clay-only surfaces, glossy plastic toys, photoreal humans, photoreal animals, realistic skin pores, realistic hair strands, unsolicited rope dreadlocks or tentacle-like hair, fashion photography anatomy, generic 3D cartoon, crochet-only amigurumi look, flat printed fabric textures, synthetic shiny fur, dirty tangled fibers, excessive fuzz hiding the silhouette, glassy anime eyes, complex irises, open bead eyes during an explicit belly laugh, thin realistic wire glasses when chunky frames are unspecified, horror dolls, stiff mannequin poses, mirrored arm positions, perfectly level props, naked human figures, missing clothes, crowded accessories, random foreground props, extra characters, recognizable brand logos, watermarks, invented text, cropped hands or feet, edge contact, blurred face hands shoes or required prop, harsh flash, neon palette
+Constraints: strict separation between the tactile textile character and the smooth non-textile 3D environment, exactly one fully expanded background preset when the user did not specify a background, shared lighting and color bounce that integrate character and scene, complete readable silhouettes, clothing present on human characters, tactile subject fibers, 3–6 coherent craft details, no extra people, new main characters, text or brands
+Avoid: combining multiple background presets, listing background options inside the image, plain sky-cloud-flower-tree background with no environmental anchor or path, fewer than four environmental element types, yarn sky, felt clouds, knitted grass, fuzzy trees, wool flowers, stitched roads, textile buildings, fabric water, paper-craft scenery, visible fibers anywhere in the environment, photoreal documentary landscape, cheap glossy plastic scenery, empty background, flat studio gradient when no background was specified, generic random blur with no set structure, uniform synthetic bokeh dots, bokeh covering the face, background so blurred that its theme and palette are unreadable, cluttered sharp background, near-black backdrop, missing foreground-middle-background separation, mismatched lighting that makes the subject look pasted on, muddy or dark palette, beige-on-beige palette, all-brown or all-orange color cast, sepia filter, kraft-paper background, tan mottled backdrop, low subject-background contrast, one identical yarn material covering the entire outfit, featureless one-piece sweater outfit, missing buttons seams pockets cuffs or accessory layers, too many unrelated patterns, crisp dry knit with no fuzzy felt halo, chunky-knit trousers matching the sweater, knitted shoes, crochet shoes, yarn soles, furry sock-like footwear, rough fuzzy human skin, knitted face, visible fibers on human hands, smooth clay-only character surfaces, photoreal humans, photoreal animals, realistic skin pores, realistic hair strands, unsolicited rope dreadlocks or tentacle-like hair, fashion photography anatomy, generic 3D cartoon character, crochet-only amigurumi look, flat printed fabric textures, synthetic shiny fur, dirty tangled fibers, excessive fuzz hiding the silhouette, glassy anime eyes, complex irises, open bead eyes during an explicit belly laugh, thin realistic wire glasses when chunky frames are unspecified, horror dolls, stiff mannequin poses, mirrored arm positions, perfectly level props, naked human figures, missing clothes, crowded accessories, random foreground props, extra characters, recognizable brand logos, watermarks, invented text, cropped hands or feet, edge contact, blurred face hands shoes or required prop, harsh flash, neon palette
 ```
 
 ## 10. 专属验收
@@ -222,9 +224,11 @@ Avoid: combining multiple background presets, listing background options inside 
 - 服装出现未经要求的文字、商标和品牌 Logo，或模型生成水印。
 - 主体被裁切、触边、手脚缺失，或用户要求的动作与道具不可辨认。
 - 背景、皮肤、头发和主服装集中在米黄与棕色同一色域，出现棕褐滤镜、牛皮纸背景或主体与背景对比不足。
-- 默认童话背景只包含天空、白云、花朵和树木，缺少标志结构、引导线、两个不对称景物簇群和 3–7 个前景小细节。
-- 童话背景少于 5 类景物，没有清楚的前景地面、主体层和柔化远景，或远景模糊到无法辨认 preset 题材。
-- 背景使用写实天空、真实花木、塑料景观或与主体不同的材质世界，而不是统一的纤维微缩布景。
+- 默认童话背景只包含天空、白云、花朵和树木，缺少环境锚点、引导线、两个不对称色彩或景物簇群和 2–5 个前景点缀。
+- 童话背景少于 4 类环境元素，没有清楚的前景地面、主体层和柔化远景，或远景模糊到完全丢失 preset 的主色与环境语义。
+- 背景天空、云、地面、建筑、花草、树木、水面或陈设出现毛线、针织、羊毛毡、短绒、飞毛、缝线、纸艺或布料纹理，没有形成无纤维的 Blender / C4D / Octane 风格化 3D 环境。
+- 背景是无光影层次的廉价塑料布景、扁平绘画或写实纪录摄影，缺少体积光、环境遮蔽、接触阴影和风格化 PBR 材质。
+- 角色与背景的光向、色温、接触阴影或颜色反射不一致，导致玩偶像后期贴在背景上。
 - 背景颜色暗沉、灰脏或偏棕，缺少明亮轻快的 5–7 色冷暖组合。
 - 完整人物造型只有一件毛衣和裤子，没有辅助层、罗纹/纽扣/口袋/明线等 3–6 个工艺细节，整体像未完成的基础模型。
 - 姿态正面僵直、左右手臂镜像对称、多个道具等高排列，或表情与动作不匹配，例如“大笑”却保持睁眼直视。
@@ -252,7 +256,7 @@ Face correction only: replace realistic eyes and facial anatomy with simple smal
 皮肤被纤维化或材质没有分区时，仅追加：
 
 ```text
-Material separation correction only: keep identity, pose, wardrobe, colors and composition unchanged. Make the human face, ears, neck and hands smooth matte low-fuzz doll material with no visible yarn, knit pattern, coarse fibers or felt nap. Keep all tactile fibers concentrated in the hair and clothing, with a clean boundary between skin and textile.
+Material separation correction only: keep identity, pose, wardrobe, colors and composition unchanged. Make the human face, ears, neck and hands smooth matte low-fuzz doll material with no visible yarn, knit pattern, coarse fibers or felt nap. Keep tactile fibers concentrated in the character's hair, clothing and textile accessories. Remove yarn, knit, felt, wool, fuzz and stitches from the sky, ground, buildings, plants, water and environmental set dressing; render the environment with smooth fiber-free stylized PBR materials.
 ```
 
 绒毛过乱或遮挡轮廓时，仅追加：
@@ -264,7 +268,7 @@ Fiber grooming correction only: keep every material and color unchanged, but sho
 构图、裁切或背景模式失败时，仅追加：
 
 ```text
-Composition correction only: keep all requested subjects, actions and the selected background preset unchanged. Restore the complete uncropped character with 8–12% safety margin and 58–75% frame-height occupancy so the fairytale world remains visible. Keep face, hands, clothing, shoes and required props sharp, soften only the nearest foreground details and far depth, and preserve the preset's signature structure and leading line.
+Composition correction only: keep all requested subjects, actions and the selected background preset unchanged. Restore the complete uncropped character with 8–12% safety margin and 58–75% frame-height occupancy so the fairytale world remains visible. Keep face, hands, clothing, shoes and required props sharp, soften only the nearest foreground details and far depth, and preserve the preset's environmental anchor and leading line.
 ```
 
 背景或颜色发闷、同色、偏棕时，仅追加：
@@ -276,13 +280,13 @@ Color and backdrop correction only: preserve subject identity, pose, materials, 
 背景颜色正确但层次仍然单薄时，仅追加：
 
 ```text
-Background richness correction only: keep the subject, pose, wardrobe, required props and selected preset-id unchanged. Rebuild that preset with at least five scenery types, one clear signature structure, one curved or diagonal leading line, two asymmetrical scenery clusters, 3–7 foreground details, a sharp subject plane and a softened but recognizable far layer. Use the preset's bright fairytale palette and unified felt-wool-textile materials. Do not replace it with a different preset or add people, animals, text or brands.
+Background richness correction only: keep the subject, pose, wardrobe, required props and selected preset-id unchanged. Rebuild that preset as a normal non-textile Blender / Cinema 4D environment with at least four environmental element types, one readable anchor, one curved or diagonal leading line, two asymmetrical color or scenery clusters, 2–5 foreground accents, a sharp subject plane and a progressively softened far layer. Use the preset's bright fairytale palette, stylized PBR materials, Octane-style global illumination and creamy optical depth of field. Do not replace it with a different preset or add people, animals, text or brands.
 ```
 
 背景有散景但缺少真实布景结构时，仅追加：
 
 ```text
-Storybook set correction only: keep the complete subject and selected preset unchanged. Replace generic blur with a coherent handcrafted fiber miniature world: preserve the preset's signature structure, leading path or curve, tactile foreground, middle scenery clusters and recognizable softened far depth. Ensure the background contains at least five scenery types and shares needle-felt, short-fiber, knit, soft-cloth or matte miniature materials with the subject. No photoreal landscape, plastic set, extra people, animals, readable signs or logos.
+Storybook set correction only: keep the complete textile subject and selected preset unchanged. Rebuild the background as a coherent Blender / Cinema 4D fairytale set rendered with Octane-style global illumination, soft volumetric light, ambient occlusion, physically coherent contact shadows and medium-shallow optical depth of field. Preserve the preset's environmental anchor, leading path or curve, normal 3D foreground surfaces, middle scenery clusters and softly recognizable far depth. Remove all yarn, felt, knit, wool, fuzz, stitches, textile-miniature and paper-craft textures from the environment; use smooth plaster, ceramic, stone, glass, metal, water, soil, clean woven awning fabric and natural stylized foliage instead. Do not change the subject or add people, animals, readable signs or logos.
 ```
 
 人物服装细节不足、像基础模型时，仅追加：

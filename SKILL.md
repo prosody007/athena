@@ -35,7 +35,7 @@ description: 通过可扩展的命名风格目录生成一致、可复用且经�
 | `marker-doodle` | 黑白粗马克笔涂鸦 | 极简粗黑线、纯黑白、完整主体和大量留白，适合独立编辑插图与后期排版 | 马克笔涂鸦、黑白马克笔、粗线涂鸦、黑白粗马克笔 | [references/marker-doodle.md](references/marker-doodle.md) |
 | `scribble-ink` | Scribble Ink 涂鸦墨线 | 松散黑色毡笔线、夸张人物半身像、纯白背景和少量珊瑚粉点缀 | 涂鸦墨线、乱笔墨线、毡笔人物、珊瑚粉涂鸦、Scribble Ink | [references/scribble-ink.md](references/scribble-ink.md) |
 | `soft-clay` | soft-clay | 单主体、低细节、原始圆润体块、小点眼和单色柔和摄影棚背景，适合系列化角色与 App 视觉 | 柔光黏土、治愈黏土、马卡龙黏土、粘土卡通、Claymation | [references/soft-clay.md](references/soft-clay.md) |
-| `knit-doll` | knit-doll | 平滑玩偶脸、刷毛毛毡针织、硬质微缩鞋，以及随机选择的明亮童话纤维世界 | 针织玩偶、毛线玩偶、羊毛毡玩偶、纤维玩偶、Cozy Knit Doll | [references/knit-doll.md](references/knit-doll.md) |
+| `knit-doll` | knit-doll | 平滑玩偶脸、刷毛毛毡针织角色、硬质微缩鞋，搭配随机明亮的 C4D / Octane 童话 3D 环境 | 针织玩偶、毛线玩偶、羊毛毡玩偶、纤维玩偶、Cozy Knit Doll | [references/knit-doll.md](references/knit-doll.md) |
 
 按以下规则选择风格：
 
@@ -60,7 +60,7 @@ description: 通过可扩展的命名风格目录生成一致、可复用且经�
    单主体、低细节圆润黏土玩具、小点眼和柔和单色摄影棚背景。
 
 4. knit-doll
-   平滑玩偶脸、刷毛毛毡针织、硬质鞋和随机明亮童话世界。
+   毛毡针织角色、硬质鞋和随机明亮的 C4D / Octane 童话 3D 环境。
 
 回复编号、style-id 或中文名称，并告诉我想画什么；也可以说“帮我选”。
 ```
