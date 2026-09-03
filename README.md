@@ -11,7 +11,7 @@ Athena is a reusable Codex image-style skill. It turns a short content descripti
 | `soft-clay` | Rounded, low-detail clay characters with soft studio lighting and restrained pastel sets. |
 | `knit-doll` | Textile characters with felted knitwear and non-knit miniature shoes, staged inside bright Blender/C4D/Octane fairytale 3D environments. |
 
-When no background is specified for `knit-doll`, Athena selects one of six named fairytale presets: Cloud Bridge Valley, Candy Town Market, Mushroom Forest Lantern Festival, Lakeside Windmill Fields, Glasshouse Tea Garden, or Dream Carnival.
+When no background is specified for `knit-doll`, Athena asks the user to choose one of six named fairytale presets, random selection, or a custom scene. Choosing custom pauses generation until the user supplies the scene description.
 
 ## Install
 

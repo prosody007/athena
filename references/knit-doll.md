@@ -20,7 +20,7 @@
 2. 角色具有手工玩偶比例：大头、细颈、简化躯干和夸张服装轮廓，带轻微不对称感。
 3. 上装同时具有可辨针脚和柔软刷毛光晕，下装与鞋子使用不同材质，形成清楚的软硬与粗细对比。
 4. 五官简化为黑色珠眼、短线眉、小鼻和克制嘴形，搭配柔和圆形腮红。
-5. 用户未指定背景时，从六套明亮轻快的 Blender / C4D / Octane 童话三维环境中随机选择一套；背景不得出现针织、毛毡、布料、缝线或纸艺材质。
+5. 用户未指定背景时，先让用户从六套命名背景、`随机` 和 `自定义` 中选择；只有用户选择 `随机` 时才从六套 Blender / C4D / Octane 童话三维环境中抽取一套。背景不得出现针织、毛毡、布料、缝线或纸艺材质。
 6. 服装至少有一个主轮廓层、一个辅助层和 3–6 个可辨手工细节，如罗纹、纽扣、贴袋、明线、流苏、毛球或贴布。
 
 ## 1. 混合媒介材质
@@ -90,9 +90,32 @@
 
 - 用户明确描述了背景时，完全服从用户，不再抽取预设。
 - 用户明确要求纯色、透明、摄影棚或极简背景时，按要求生成，不加入童话场景。
-- 用户没有提供任何背景信息时，从 `F1`–`F6` 中随机选择且只选择一套。先在内部完成选择，再把选中预设的完整描述写入最终提示词；不得把六套选项或“随机选择”字样交给生图模型。
-- 同一请求生成多张图时，在六套预设全部使用一次之前不重复；新请求允许重新随机。
-- 最终交付时返回本次使用的 preset-id，方便复用同一背景或主动换一套。
+- 用户没有提供任何背景信息时，必须先展示下方“背景选择菜单”并等待回复，不得默认随机、替用户选择或提前调用生图接口。
+- 用户可回复 `F1`–`F6`、对应背景名或菜单编号 `1`–`6`。选中后只展开这一套预设。
+- 用户回复 `随机`、`R` 或菜单编号 `7` 时，从 `F1`–`F6` 中随机选择且只选择一套；先在内部完成选择，再把选中预设的完整描述写入最终提示词。不得把六套候选、选择过程或“随机”字样交给生图模型。
+- 用户回复 `自定义`、`C` 或菜单编号 `8` 时，如果同一条消息尚未包含具体场景描述，询问“请描述你想要的背景场景”，然后等待下一条回复，不得生图。收到描述后，保留之前已经确定的主体、画幅、文字和其他要求，把新描述作为唯一 `Scene/backdrop`，不再叠加或抽取 `F1`–`F6`。
+- 用户在第一次请求中已经写出 `自定义背景：<场景>`、`背景：<场景>` 或明确的场景描述时，直接按该描述生成，不再展示菜单。
+- `随机` 模式一次生成多张图时，在六套预设全部使用一次之前不重复；用户点选某一预设或提供自定义背景时，所有结果沿用该背景，除非用户明确要求背景变化。
+- 最终交付时，命名预设或随机模式返回实际使用的 `preset-id`；自定义模式返回 `background-source: custom`。
+
+### 背景选择菜单
+
+用户未指定背景时，原样展示这份简短菜单：
+
+```text
+请选择 knit-doll 背景：
+
+1. F1｜云桥花谷
+2. F2｜糖果小镇集市
+3. F3｜蘑菇森林灯会
+4. F4｜湖畔风车花田
+5. F5｜玻璃花房茶园
+6. F6｜梦幻游园会
+7. 随机｜从六套背景中随机选择
+8. 自定义｜由你描述具体背景场景
+
+回复编号、preset-id 或背景名称。选择“自定义”时，也可以直接回复：自定义背景：<你的场景描述>。
+```
 
 ### 所有预设的共同构图
 
@@ -180,7 +203,7 @@
 
 ## 9. 风格提示词模块
 
-用户没有指定背景时，先从 `F1`–`F6` 中选中一个 preset-id，再将该预设完整展开到 `Scene/backdrop`。只写选中的背景，不要把候选列表、preset 选择过程或“随机”字样交给生图模型。
+背景确定后才能组装提示词：用户选择 `F1`–`F6` 时展开对应预设；选择 `随机` 时先在内部抽取一套再展开；选择 `自定义` 时使用用户随后输入的场景描述。只写最终确定的一种背景，不要把菜单、候选列表、选择过程或“随机”字样交给生图模型。
 
 将以下内容填入 Athena 的通用提示词结构，只使用与请求有关的字段：
 
@@ -189,7 +212,7 @@ Use case: stylized-concept
 Asset type: reusable knit-doll character illustration, handcrafted textile puppet staged inside a premium Blender / Cinema 4D / Octane environment, <aspect ratio>
 Primary request: <the user's subject, action, relationship, and explicitly requested objects>
 Required objects: <only explicitly requested semantic objects>
-Background preset: <selected F1, F2, F3, F4, F5 or F6; omit when the user specified a background>
+Background preset: <selected F1, F2, F3, F4, F5 or F6; omit for a user-specified or custom background>
 Scene/backdrop: <fully expand only the selected preset as a normal non-textile Blender / Cinema 4D environment with stylized PBR surfaces, one environmental anchor, a leading path or curve, asymmetrical scenery clusters, 2–5 foreground details, a middle-ground subject plane and softened far depth; if the user specified a background, use the user's background instead>
 Style/medium: a handcrafted mixed-media textile doll with visible chunky knit loops, ribbed yarn, needle-felted wool and brushed short fibers, staged inside a polished non-textile Blender / Cinema 4D world with Octane-style rendering; tactile character, smooth 3D environment, deliberately handmade subject but professionally rendered scene
 Subject design: exaggerated handmade doll proportions, large simplified head, slender neck, simplified limbs, slightly oversized clothing and shoes, gentle three-quarter torso turn, 5–12 degree head tilt, uneven shoulder and elbow heights, subtle handmade asymmetry, immediately readable silhouette
@@ -201,7 +224,7 @@ Color palette: bright cheerful dreamlike palette of 5–7 coordinated colors sel
 Materials/textures: strict material zoning; human face ears neck and hands are smooth matte low-fuzz doll material; hair is organized needle-felted wool or yarn clusters; upper garments combine readable knit structure with a dense brushed fuzzy felt halo; bottoms use finer woven felt, corduroy, denim or low-nap tight knit; shoes use non-knit canvas, suede, matte leather and molded rubber soles; animal bodies may use short plush fibers; character-side hard props are simplified and rounded; the environment uses fiber-free stylized PBR materials such as smooth painted plaster, ceramic, stone, glass, metal, water, soil and natural leaf or petal surfaces
 Focus/rendering: sharp face, hands, clothing front, shoes and required props; 70–100mm portrait-lens look, medium-shallow depth of field, softly blurred near foreground, creamy circular bokeh and progressively softened mid-to-far 3D scenery; preserve readable subject fibers without harsh oversharpening; premium Blender / Cinema 4D scene with Octane-style global illumination, volumetric light, ambient occlusion and physically coherent contact shadows
 Text (verbatim): <exact text or no text>
-Constraints: strict separation between the tactile textile character and the smooth non-textile 3D environment, exactly one fully expanded background preset when the user did not specify a background, shared lighting and color bounce that integrate character and scene, complete readable silhouettes, clothing present on human characters, tactile subject fibers, 3–6 coherent craft details, no extra people, new main characters, text or brands
+Constraints: strict separation between the tactile textile character and the smooth non-textile 3D environment, exactly one final background derived from a selected preset, an internally resolved random preset, or the user's custom description, shared lighting and color bounce that integrate character and scene, complete readable silhouettes, clothing present on human characters, tactile subject fibers, 3–6 coherent craft details, no extra people, new main characters, text or brands
 Avoid: combining multiple background presets, listing background options inside the image, plain sky-cloud-flower-tree background with no environmental anchor or path, fewer than four environmental element types, yarn sky, felt clouds, knitted grass, fuzzy trees, wool flowers, stitched roads, textile buildings, fabric water, paper-craft scenery, visible fibers anywhere in the environment, photoreal documentary landscape, cheap glossy plastic scenery, empty background, flat studio gradient when no background was specified, generic random blur with no set structure, uniform synthetic bokeh dots, bokeh covering the face, background so blurred that its theme and palette are unreadable, cluttered sharp background, near-black backdrop, missing foreground-middle-background separation, mismatched lighting that makes the subject look pasted on, muddy or dark palette, beige-on-beige palette, all-brown or all-orange color cast, sepia filter, kraft-paper background, tan mottled backdrop, low subject-background contrast, one identical yarn material covering the entire outfit, featureless one-piece sweater outfit, missing buttons seams pockets cuffs or accessory layers, too many unrelated patterns, crisp dry knit with no fuzzy felt halo, chunky-knit trousers matching the sweater, knitted shoes, crochet shoes, yarn soles, furry sock-like footwear, rough fuzzy human skin, knitted face, visible fibers on human hands, smooth clay-only character surfaces, photoreal humans, photoreal animals, realistic skin pores, realistic hair strands, unsolicited rope dreadlocks or tentacle-like hair, fashion photography anatomy, generic 3D cartoon character, crochet-only amigurumi look, flat printed fabric textures, synthetic shiny fur, dirty tangled fibers, excessive fuzz hiding the silhouette, glassy anime eyes, complex irises, open bead eyes during an explicit belly laugh, thin realistic wire glasses when chunky frames are unspecified, horror dolls, stiff mannequin poses, mirrored arm positions, perfectly level props, naked human figures, missing clothes, crowded accessories, random foreground props, extra characters, recognizable brand logos, watermarks, invented text, cropped hands or feet, edge contact, blurred face hands shoes or required prop, harsh flash, neon palette
 ```
 
@@ -219,7 +242,7 @@ Avoid: combining multiple background presets, listing background options inside 
 - 角色比例过于写实、像真人时尚模特，或退化为普通头大身小的光滑 3D 公仔。
 - 动物变成真实宠物、真实皮毛或与人物材质不一致的照片级动物。
 - 五官出现复杂虹膜、写实眼白、多重眼球反光、真实嘴唇或恐怖玩偶感。
-- 用户没有指定背景时没有选择 `F1`–`F6` 中的一套，或把多套预设元素混杂在同一画面；用户明确指定背景时却被预设覆盖。
+- 用户没有指定背景时未先展示八项菜单便直接生图；用户选择 `随机` 后没有落到 `F1`–`F6` 中的唯一一套；用户选择 `自定义` 后未等待具体场景描述便生图；把多套预设混杂在同一画面，或用预设覆盖用户自定义背景。
 - 场景背景过清晰、过乱，或景深导致脸、手、服装和必要道具模糊。
 - 服装出现未经要求的文字、商标和品牌 Logo，或模型生成水印。
 - 主体被裁切、触边、手脚缺失，或用户要求的动作与道具不可辨认。
